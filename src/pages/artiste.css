@@ -1,0 +1,130 @@
+/* 💎 A.C.J — Dream Trap Halo Edition */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Bebas+Neue&display=swap');
+
+.artiste-page {
+min-height: 100vh;
+background: radial-gradient(circle at center, #04000a 0%, #0a0015 70%, #000 100%);
+color: #fff;
+text-align: center;
+overflow: hidden;
+position: relative;
+}
+
+/* 🌫️ Portrait flottant transparent */
+.artist-bg-portrait {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 320px;
+height: 320px;
+object-fit: cover;
+border-radius: 50%;
+transform: translate(-50%, -50%);
+opacity: 0.15;
+filter: blur(2px) brightness(1.4);
+animation: softFloat 7s ease-in-out infinite alternate;
+z-index: 0;
+}
+
+@keyframes softFloat {
+0% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
+100% { transform: translate(-50%, -52%) scale(1.05); opacity: 0.2; }
+}
+
+/* ✨ Halo pastel */
+.artiste-hero {
+margin-top: 120px;
+position: relative;
+z-index: 2;
+}
+
+.artiste-hero::before {
+content: "";
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 450px;
+height: 450px;
+background: radial-gradient(circle, rgba(173, 216, 230, 0.35), transparent 80%);
+filter: blur(100px);
+animation: glowShift 10s ease-in-out infinite alternate;
+z-index: -1;
+}
+
+@keyframes glowShift {
+0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+100% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.25); }
+}
+
+/* 🌈 Blaze - glow bleu/rose */
+.acj-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 6rem;
+letter-spacing: 8px;
+background: linear-gradient(90deg, #aee6ff, #ffb6d5, #e6e6ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow:
+0 0 15px rgba(255, 182, 193, 0.5),
+0 0 30px rgba(173, 216, 230, 0.4),
+0 0 60px rgba(255, 255, 255, 0.2);
+animation: glowDrift 6s ease-in-out infinite alternate;
+position: relative;
+}
+
+@keyframes glowDrift {
+0% { text-shadow: 0 0 10px #aee6ff, 0 0 25px #ffb6c1; }
+100% { text-shadow: 0 0 20px #bde0fe, 0 0 45px #ffcce7; }
+}
+
+/* 💫 Sous-titre */
+.artist-sub {
+font-family: 'Bebas Neue', sans-serif;
+font-size: 1.5rem;
+color: #ffb6c1;
+text-transform: uppercase;
+margin-top: 10px;
+opacity: 0.85;
+letter-spacing: 2px;
+animation: fadeIn 2s ease 1s both;
+}
+
+/* 🌸 Bio douce */
+.artist-bio {
+max-width: 700px;
+margin: 80px auto 0;
+font-size: 1.1rem;
+line-height: 1.8;
+color: #e9dff6;
+animation: fadeIn 2s ease 1.5s both;
+}
+
+/* 🎧 Bouton */
+.artist-btn {
+display: inline-block;
+margin-top: 30px;
+padding: 12px 28px;
+background: linear-gradient(90deg, #aee6ff, #ffcce7, #ffb6c1);
+border-radius: 25px;
+color: #1a001a;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 1px;
+text-decoration: none;
+box-shadow: 0 0 25px rgba(255, 192, 203, 0.4);
+transition: 0.3s;
+}
+
+.artist-btn:hover {
+background: linear-gradient(90deg, #bde0fe, #ffd1dc, #fff0f5);
+transform: translateY(-3px) scale(1.03);
+box-shadow: 0 0 35px rgba(255, 192, 203, 0.8);
+}
+
+/* 🎬 Fade-in global */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}

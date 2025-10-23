@@ -1,0 +1,102 @@
+/* 🌆 Trap Chic Style — Tana Edition */
+
+body {
+background: linear-gradient(135deg, #0a000a, #1a001a, #000);
+font-family: 'Poppins', sans-serif;
+color: #fff;
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+background: rgba(0, 0, 0, 0.7);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+position: sticky;
+top: 0;
+z-index: 100;
+transition: all 0.4s ease;
+}
+
+.navbar:hover {
+background: rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: 700;
+letter-spacing: 2px;
+color: gold;
+text-transform: uppercase;
+text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 25px;
+}
+
+.nav-links a {
+text-decoration: none;
+color: white;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+color: gold;
+text-shadow: 0 0 8px gold;
+transform: scale(1.05);
+}
+
+/* H1 aura */
+.label-title {
+font-size: 3.5rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+color: #fff;
+text-shadow: 0 0 10px gold, 0 0 30px rgba(255, 215, 0, 0.4);
+animation: glowTitle 3s infinite alternate;
+}
+
+@keyframes glowTitle {
+0% { text-shadow: 0 0 10px gold; }
+100% { text-shadow: 0 0 30px gold, 0 0 60px rgba(255, 215, 0, 0.6); }
+}
+
+/* Buttons trap chic */
+button, .discover-btn, .insta-btn {
+background: linear-gradient(90deg, #2c0000, #4a001a, #b8860b);
+color: white;
+border: none;
+padding: 12px 28px;
+border-radius: 6px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+cursor: pointer;
+transition: all 0.4s ease;
+box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+button:hover, .discover-btn:hover, .insta-btn:hover {
+background: linear-gradient(90deg, #4a001a, #b8860b, #ffcc00);
+transform: translateY(-2px) scale(1.03);
+box-shadow: 0 0 20px gold;
+}
+
+/* Fluid fade-in for sections */
+section, .label-content {
+animation: fadeIn 1.4s ease both;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(30px); }
+to { opacity: 1; transform: translateY(0); }
+}

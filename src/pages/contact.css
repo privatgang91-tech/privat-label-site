@@ -1,0 +1,19 @@
+.contact-page {
+background: radial-gradient(circle at center, #000, #200);
+color: #fff;
+min-height: 100vh;
+text-align: center;
+padding-top: 120px;
+}
+
+.contact-container h1 {
+font-family: "Orbitron", sans-serif;
+color: gold;
+text-shadow: 0 0 15px #ff0066;
+}
+
+.contact-container p {
+font-size: 1.1rem;
+margin: 10px 0;
+opacity: 0.9;
+}

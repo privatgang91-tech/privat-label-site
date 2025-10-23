@@ -1,0 +1,158 @@
+/* 🌟 Trap Chic Royale - Label Page Deluxe */
+
+.label-page {
+min-height: 100vh;
+background: radial-gradient(circle at center, #0b000b 0%, #000 80%);
+color: #fff;
+overflow-x: hidden;
+text-align: center;
+position: relative;
+opacity: 0;
+animation: fadeInSoft 1.6s ease forwards;
+}
+
+/* ✨ Halo central doré */
+.golden-glow {
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translateX(-50%);
+width: 450px;
+height: 450px;
+background: radial-gradient(circle, rgba(255, 215, 0, 0.25), transparent 70%);
+filter: blur(80px);
+z-index: 0;
+animation: glowPulse 7s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+0% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+100% { opacity: 0.8; transform: translateX(-50%) scale(1.2); }
+}
+
+/* 🎬 Apparition douce de la page */
+@keyframes fadeInSoft {
+0% {
+opacity: 0;
+filter: blur(12px);
+transform: scale(1.02);
+}
+100% {
+opacity: 1;
+filter: blur(0);
+transform: scale(1);
+}
+}
+
+/* 💎 Hero section */
+.label-hero {
+position: relative;
+padding-top: 130px;
+padding-bottom: 80px;
+z-index: 1;
+animation: fadeInUp 1.5s ease both;
+}
+
+/* 👑 Titre principal */
+.label-title {
+font-size: 4.2rem;
+font-weight: 800;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: 3px;
+text-shadow: 0 0 15px gold, 0 0 35px rgba(255, 215, 0, 0.7);
+animation: titleReveal 2.3s ease forwards;
+}
+
+@keyframes titleReveal {
+0% { opacity: 0; transform: translateY(40px); }
+100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Sous-titre doré */
+.label-sub {
+font-size: 1.3rem;
+font-weight: 500;
+color: gold;
+margin-top: 10px;
+letter-spacing: 3px;
+text-transform: uppercase;
+opacity: 0;
+animation: fadeIn 1.6s ease 1s forwards;
+}
+
+/* 🌹 Contenu central */
+.label-content {
+max-width: 850px;
+margin: 0 auto;
+padding: 50px 20px;
+animation: fadeInUp 2s ease 1.2s both;
+}
+
+.label-text {
+font-size: 1.1rem;
+line-height: 1.8;
+color: #ddd;
+}
+
+.highlight {
+color: gold;
+font-weight: 600;
+text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* 💫 Boutons dorés */
+.label-buttons {
+margin-top: 45px;
+display: flex;
+justify-content: center;
+gap: 25px;
+}
+
+.insta-btn, .discover-btn {
+background: linear-gradient(90deg, #2c0000, #4a001a, #b8860b);
+color: white;
+padding: 12px 30px;
+border-radius: 8px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+transition: all 0.4s ease;
+text-decoration: none;
+position: relative;
+overflow: hidden;
+}
+
+/* effet de lumière au hover */
+.insta-btn::before, .discover-btn::before {
+content: "";
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+transition: all 0.6s ease;
+}
+
+.insta-btn:hover::before, .discover-btn:hover::before {
+left: 100%;
+}
+
+.insta-btn:hover, .discover-btn:hover {
+background: linear-gradient(90deg, #4a001a, #b8860b, #ffcc00);
+transform: translateY(-3px) scale(1.03);
+box-shadow: 0 0 25px gold;
+}
+
+/* ✨ Keyframes pour douceur */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(40px); }
+to { opacity: 1; transform: translateY(0); }
+}

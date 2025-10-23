@@ -1,0 +1,32 @@
+.logo {
+position: relative;
+display: inline-block;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+background: linear-gradient(90deg, #e50914, #bfa14a);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+transition: 0.4s ease;
+}
+
+.logo::after {
+content: "";
+position: absolute;
+bottom: -3px;
+left: 0;
+width: 0%;
+height: 2px;
+background: linear-gradient(90deg, #bfa14a, #e50914);
+transition: 0.5s ease;
+}
+
+.logo:hover::after {
+width: 100%;
+box-shadow: 0 0 10px rgba(191, 161, 74, 0.8);
+}
+
+.logo:hover {
+text-shadow: 0 0 10px rgba(191, 161, 74, 0.4);
+transform: scale(1.02);
+}
