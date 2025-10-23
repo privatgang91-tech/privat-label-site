@@ -1,0 +1,72 @@
+/* Style global - Boutique Privat Label 💋 */
+
+html, body {
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(135deg, #0a0a0a, #240024);
+color: #fff;
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+
+/* Conteneur principal */
+#root {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+text-align: center;
+padding: 2rem;
+animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Titres et texte */
+h1 {
+font-size: 2.3rem;
+font-weight: 600;
+background: linear-gradient(90deg, #ff66cc, #b366ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 12px rgba(255, 102, 204, 0.3);
+}
+
+p {
+font-size: 1.1rem;
+color: rgba(255, 255, 255, 0.85);
+line-height: 1.6;
+}
+
+/* Animation douce */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* Effet pulsant pour le chargement */
+.loading {
+font-size: 1.2rem;
+color: #ff99ff;
+animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+0% { opacity: 0.3; }
+50% { opacity: 1; }
+100% { opacity: 0.3; }
+}
+
+/* Pour les liens */
+a {
+color: #ff99ff;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+a:hover {
+color: #ffffff;
+text-shadow: 0 0 8px #ff66cc;
+}

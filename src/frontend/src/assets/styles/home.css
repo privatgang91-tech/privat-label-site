@@ -1,0 +1,88 @@
+.home-container {
+min-height: 100vh;
+background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #fff;
+text-align: center;
+overflow: hidden;
+animation: fadeInBg 1.5s ease-in-out;
+}
+
+@keyframes fadeInBg {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+.home-logo {
+width: 180px;
+margin-bottom: 25px;
+opacity: 0;
+transform: translateY(20px);
+animation: fadeInUp 1.8s ease forwards;
+}
+
+.brand-name {
+font-family: "Playfair Display", serif;
+font-size: 2.8rem;
+letter-spacing: 2px;
+color: #fff;
+text-shadow:
+0 0 10px rgba(255, 0, 60, 0.5),
+0 0 20px rgba(255, 0, 60, 0.3),
+0 0 40px rgba(255, 0, 60, 0.2);
+animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+0%, 100% {
+text-shadow:
+0 0 10px rgba(255, 0, 60, 0.5),
+0 0 20px rgba(255, 0, 60, 0.3),
+0 0 40px rgba(255, 0, 60, 0.2);
+}
+50% {
+text-shadow:
+0 0 20px rgba(255, 30, 80, 0.8),
+0 0 40px rgba(255, 0, 60, 0.5),
+0 0 80px rgba(255, 0, 60, 0.3);
+}
+}
+
+.slogan {
+margin-top: 10px;
+font-size: 1.1rem;
+color: #bbb;
+opacity: 0;
+animation: fadeInUp 2s ease forwards 0.5s;
+}
+
+.enter-btn {
+margin-top: 35px;
+padding: 10px 26px;
+background: linear-gradient(90deg, #ff003c, #ff4b6b);
+color: #fff;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+font-weight: 600;
+font-family: 'Montserrat', sans-serif;
+letter-spacing: 1px;
+opacity: 0;
+animation: fadeInUp 2.2s ease forwards 1s;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.enter-btn:hover {
+transform: scale(1.05);
+box-shadow: 0 0 15px rgba(255, 0, 60, 0.5);
+}
+
+@keyframes fadeInUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
