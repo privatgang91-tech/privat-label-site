@@ -1,74 +1,191 @@
-/* 🌆 Page Shop - En construction */
+/* 🌈 Page Shop - Glam Glitchée Bimbo Digital 🌈 */
 
-.shop-page {
+.shop-container {
+background: radial-gradient(circle at top, #0b0013 0%, #000 100%);
 min-height: 100vh;
-background: linear-gradient(135deg, #0a0a0a, #1a001a);
-color: white;
+padding: 3rem 2rem;
 text-align: center;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-overflow: hidden;
-}
-
-.shop-content {
-margin-top: 80px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-
-/* ✨ logo central + effet respiration douce */
-.construction-img {
-max-width: 200px;
-width: 50%;
-height: auto;
-margin-bottom: 25px;
-animation: softPulse 2.8s ease-in-out infinite;
-}
-
-@keyframes softPulse {
-0%, 100% { transform: scale(1); opacity: 1; }
-50% { transform: scale(1.05); opacity: 0.85; }
+font-family: "Poppins", sans-serif;
+color: #fff;
+animation: fadeIn 1s ease-in-out;
 }
 
 .shop-title {
-font-size: 2rem;
-color: gold;
-text-shadow: 0 0 10px #ff0044, 0 0 20px gold;
-margin-bottom: 10px;
-animation: fadeIn 1.5s ease;
+font-size: 2.8rem;
+font-weight: 700;
+color: #ff9cff;
+text-shadow: 0 0 15px #ff7afc, 0 0 25px #ff00d4;
+margin-bottom: 0.2em;
+animation: glowPulse 2.5s infinite alternate;
 }
 
-.shop-text {
+.shop-subtitle {
 font-size: 1.1rem;
-color: #ddd;
-max-width: 600px;
-line-height: 1.7;
-animation: fadeIn 2s ease;
+letter-spacing: 1px;
+color: #ffb6ff;
+text-shadow: 0 0 6px #ff00d4;
+margin-bottom: 2rem;
 }
 
-.back-home {
-margin-top: 30px;
-display: inline-block;
-padding: 10px 22px;
-background: linear-gradient(90deg, #660000, #ff6600, gold);
-color: white;
-border-radius: 6px;
-text-decoration: none;
+.shop-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 2.5rem;
+justify-items: center;
+padding: 0 1rem;
+}
+
+.shop-card {
+background: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 0, 214, 0.3);
+border-radius: 20px;
+box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+overflow: hidden;
+width: 230px;
+transition: all 0.4s ease;
+animation: cardFade 0.6s ease-in-out;
+position: relative;
+}
+
+.shop-card:hover {
+transform: translateY(-8px) scale(1.05);
+box-shadow: 0 0 25px rgba(255, 0, 255, 0.6), 0 0 60px rgba(255, 70, 255, 0.3);
+border-color: #ff00ff;
+filter: hue-rotate(20deg);
+}
+
+.shop-image-wrapper {
+width: 100%;
+height: 230px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #0a0011;
+}
+
+.shop-image-wrapper img {
+width: 80%;
+height: auto;
+object-fit: contain;
+transition: transform 0.6s ease;
+}
+
+.shop-card:hover img {
+transform: scale(1.08);
+}
+
+.shop-card h4 {
+font-size: 1.1rem;
+color: #ffb8ff;
+margin: 1rem 0 0.2rem;
 font-weight: 600;
-box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-transition: 0.3s;
 }
 
-.back-home:hover {
-transform: translateY(-3px) scale(1.05);
-box-shadow: 0 0 25px gold;
+.shop-card p {
+font-size: 0.9rem;
+color: #d8a8ff;
+margin-bottom: 1.2rem;
 }
 
+.shop-card button {
+background: linear-gradient(90deg, #ff00cc, #ff6600);
+color: white;
+border: none;
+border-radius: 25px;
+padding: 0.6rem 1.2rem;
+font-weight: 600;
+cursor: pointer;
+box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+transition: all 0.3s ease;
+}
+
+.shop-card button:hover {
+background: linear-gradient(90deg, #ff6600, #ff00cc);
+box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+}
+
+/* ✨ Animations ✨ */
 @keyframes fadeIn {
-from { opacity: 0; transform: translateY(20px); }
-to { opacity: 1; transform: translateY(0); }
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes glowPulse {
+from {
+text-shadow: 0 0 10px #ff7afc, 0 0 25px #ff00d4;
+}
+to {
+text-shadow: 0 0 25px #ff00d4, 0 0 45px #ff44ff;
+}
+}
+
+@keyframes cardFade {
+from {
+opacity: 0;
+transform: scale(0.9);
+}
+to {
+opacity: 1;
+transform: scale(1);
+}
+}
+/* 🌸 Effet Glitch sur le titre 🌸 */
+.shop-title {
+position: relative;
+display: inline-block;
+font-size: 2.8rem;
+font-weight: 700;
+color: #ff9cff;
+text-shadow: 0 0 15px #ff7afc, 0 0 25px #ff00d4;
+animation: glowPulse 2.5s infinite alternate;
+overflow: hidden;
+}
+
+.shop-title::before,
+.shop-title::after {
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+color: #ff00ff;
+opacity: 0.8;
+clip-path: inset(0 0 0 0);
+}
+
+.shop-title::before {
+left: 2px;
+text-shadow: -2px 0 magenta;
+animation: glitchTop 2s infinite linear alternate-reverse;
+}
+
+.shop-title::after {
+left: -2px;
+text-shadow: -2px 0 cyan;
+animation: glitchBottom 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+0% { clip-path: inset(0 0 85% 0); }
+20% { clip-path: inset(0 0 10% 0); }
+40% { clip-path: inset(0 0 50% 0); }
+60% { clip-path: inset(0 0 30% 0); }
+80% { clip-path: inset(0 0 70% 0); }
+100% { clip-path: inset(0 0 90% 0); }
+}
+
+@keyframes glitchBottom {
+0% { clip-path: inset(85% 0 0 0); }
+20% { clip-path: inset(10% 0 0 0); }
+40% { clip-path: inset(50% 0 0 0); }
+60% { clip-path: inset(30% 0 0 0); }
+80% { clip-path: inset(70% 0 0 0); }
+100% { clip-path: inset(90% 0 0 0); }
 }
