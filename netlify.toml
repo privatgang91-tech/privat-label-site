@@ -6,8 +6,14 @@ command = "npm run build"
 [functions]
 node_bundler = "esbuild"
 
-# Redirection vers les fonctions
+# Redirect for serverless functions
 [[redirects]]
 from = "/.netlify/functions/*"
 to = "/.netlify/functions/:splat"
+status = 200
+
+# React Router fix
+[[redirects]]
+from = "/*"
+to = "/index.html"
 status = 200
